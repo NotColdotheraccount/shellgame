@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shell Game</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="app">
+    <header class="topbar">
+        <div class="brand">
+            <div class="dot"></div>
+            <div>
+                <div class="title">Shell Game</div>
+                <div class="subtitle"></div>
+            </div>
+        </div>
+
+        <div class="top-actions">
+            <button id="lvl1Btn" class="pill active" type="button">Level 1</button>
+            <button id="lvl2Btn" class="pill" type="button">Level 2</button>
+            <button id="startBtn" class="btn btn-primary" type="button">Start</button>
+            <button id="resetBtn" class="btn btn-ghost" type="button">Reset</button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="panel">
+            <div class="panel-head">
+                <h2>Play</h2>
+                <div class="hint">Watch closely. After shuffling, click a cup.</div>
+            </div>
+
+            <div class="status">
+                <div><span class="label">Level:</span> <span id="levelText" class="value">1</span></div>
+                <div><span class="label">Cups:</span> <span id="cupsText" class="value">2</span></div>
+                <div><span class="label">State:</span> <span id="stateText" class="value">Ready</span></div>
+            </div>
+
+            <div id="message" class="message muted">
+                Click <b>Start</b> to begin. Then watch the shuffle and pick a cup.
+            </div>
+
+            <div class="table-wrap">
+                <div id="table" class="table" aria-label="Shell game table">
+                    <!-- Cups injected by JS -->
+                </div>
+            </div>
+
+            <div class="mini muted">
+                Tip: On Level 2 it shuffles fast, Try not to blink
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Valentine Popup (Level 2 only) -->
+<div id="valentineModal" class="modal hidden" aria-hidden="true">
+    <div class="backdrop"></div>
+
+    <div class="card">
+        <div class="card-top">
+            <div class="sticker" aria-hidden="true">💌</div>
+            <div>
+                <div class="card-title">Will you be my valentines?</div>
+                <div class="card-sub"></div>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div id="valentineResult" class="result muted"></div>
+
+            <div class="card-actions">
+                <button id="yesBtn" class="btn btn-primary" type="button">Yes</button>
+                <button id="noBtn" class="btn btn-ghost" type="button">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
