@@ -386,7 +386,7 @@ noBtn.addEventListener("click", () => {
     valentineResult.textContent =
         noDodges === 1 ? "Are you sure?" :
             noDodges === 2 ? "Really sure??" :
-                "YOU REALLY REALLY SURE????";
+                "I think you can press the yes button!";
 
     const actions = noBtn.parentElement; // .card-actions
     const pad = 6;
